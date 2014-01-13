@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use postgres as the database for Active Record
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -45,9 +45,10 @@ end
 # gem 'debugger', group: [:development, :test]
 
 #ref https://devcenter.heroku.com/articles/ruby-support#rails-4-x-applications
-gem 'rails_12factor'
 
 #ref https://devcenter.heroku.com/articles/ruby-support#rails-4-x-applications
 gem 'rails_stdout_logging'
 
-#gem "heroku"
+gem 'rails_12factor', group: :production
+
+ruby "2.0.0"
